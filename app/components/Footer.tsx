@@ -35,9 +35,10 @@ export default function Footer() {
           <div className="flex flex-col gap-4">
             <p className="text-white font-bold text-base uppercase tracking-widest">Pages</p>
             <div className="flex flex-col gap-3 text-base font-normal">
-              <a href="/"         className="hover:text-white transition-colors">Home</a>
-              <a href="/about"    className="hover:text-white transition-colors">About</a>
-              <a href="/get-help" className="hover:text-white transition-colors">Get Help</a>
+              <a href="/"          className="hover:text-white transition-colors">Home</a>
+              <a href="/about"     className="hover:text-white transition-colors">About</a>
+              <a href="/volunteer" className="hover:text-white transition-colors">Volunteer</a>
+              <a href="/get-help"  className="hover:text-white transition-colors">Get Help</a>
             </div>
           </div>
 

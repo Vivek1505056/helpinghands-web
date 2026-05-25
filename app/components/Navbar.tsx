@@ -5,10 +5,10 @@ import Image from "next/image";
 import DonationModal from "./DonationModal";
 
 const links = [
-  { href: "/about",    label: "About",    cta: false },
-  { href: "/get-help", label: "Get Help", cta: false },
-  { href: "/#contact", label: "Volunteer", cta: false },
-  { href: "/donate",   label: "Donate",   cta: true  },
+  { href: "/about",     label: "About",     cta: false },
+  { href: "/volunteer", label: "Volunteer", cta: false },
+  { href: "/get-help",  label: "Get Help",  cta: false },
+  { href: "/donate",    label: "Donate",    cta: true  },
 ];
 
 export default function Navbar() {

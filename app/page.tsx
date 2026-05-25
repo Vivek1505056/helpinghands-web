@@ -11,7 +11,7 @@ export default function Home() {
       <Navbar />
 
       {/* ── 2. HERO ─────────────────────────────────────────────── */}
-      <section className="relative overflow-hidden flex flex-col items-center justify-center text-center text-white px-6 py-72">
+      <section className="relative overflow-hidden flex flex-col items-center justify-center text-center text-white px-6 py-40 sm:py-72">
         <div
           className="absolute origin-center scale-[0.88]"
           style={{

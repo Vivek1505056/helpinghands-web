@@ -42,7 +42,7 @@ export default function DonationModal({ onClose }: { onClose: () => void }) {
           </div>
 
           {/* Right — form */}
-          <div className="flex-1 p-8 overflow-y-auto">
+          <div className="flex-1 p-6 sm:p-8 overflow-y-auto">
 
             {/* Close button */}
             <button
@@ -64,12 +64,12 @@ export default function DonationModal({ onClose }: { onClose: () => void }) {
 
             {/* Preset amounts */}
             <p className="text-base font-bold text-gray-700 mb-3">Select an amount</p>
-            <div className="grid grid-cols-5 gap-2 mb-6">
+            <div className="grid grid-cols-3 sm:grid-cols-5 gap-2 mb-6">
               {PRESETS.map((amt) => (
                 <button
                   key={amt}
                   onClick={() => { setSelected(amt); setCustom(""); }}
-                  className={`py-3 text-base font-bold border transition-colors ${
+                  className={`py-3 text-sm sm:text-base font-bold border transition-colors ${
                     selected === amt && !custom
                       ? "bg-royalBlue-500 text-white border-royalBlue-500"
                       : "border-gray-300 text-gray-700 hover:border-royalBlue-500 hover:text-royalBlue-500"

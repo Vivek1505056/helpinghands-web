@@ -7,7 +7,7 @@ export default function About() {
       <Navbar />
 
       {/* ── HERO ─────────────────────────────────────────────────── */}
-      <section className="relative overflow-hidden flex flex-col items-center justify-center text-center text-white px-6 py-72">
+      <section className="relative overflow-hidden flex flex-col items-center justify-center text-center text-white px-6 py-40 sm:py-72">
         <div
           className="absolute origin-center scale-[0.75]"
           style={{
@@ -38,12 +38,15 @@ export default function About() {
               doing what we could with what we had. The need kept growing, and so did our
               determination to do more.
             </p>
-            <p className="text-lg font-normal text-gray-500 leading-relaxed">
+            <p className="text-lg font-normal text-gray-500 leading-relaxed mb-6">
               Eventually we stopped waiting and started our own. Out of Kings Embassy Int
               Ministry in North York, we built something from the ground up. Now, through
               our partnership with{" "}
               <span className="font-bold text-royalBlue-600">Second Harvest</span>, we
               feed over 80 families every Sunday. No strings, no paperwork, just food.
+            </p>
+            <p className="text-base font-normal text-royalBlue-600">
+              Over <span className="font-bold">6 years</span> of showing up, every single week.
             </p>
           </div>
           <div className="grid grid-cols-2 gap-3">
@@ -103,7 +106,7 @@ export default function About() {
               waste out of landfills.
             </p>
           </div>
-          <div className="grid grid-cols-2 gap-6 text-center">
+          <div className="grid grid-cols-2 gap-4 text-center">
             {[
               { value: "$280,592", label: "Value of food rescued" },
               { value: "99,401",  label: "Lbs of greenhouse gases diverted" },
@@ -126,20 +129,21 @@ export default function About() {
           <div className="w-12 h-1 bg-royalBlue-500 mb-12" />
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 mb-14">
             {[
-              { name: "Vikrum Chauhan",  title: "Director of Operations",   img: "/team-vikrum.jpg" },
-              { name: "Chetna Zalpuri", title: "Executive Director",        img: ""               },
-              { name: "Mary Jane",      title: "Food Coordinator",          img: "/team-mary.jpg"  },
-              { name: "Sulagana Guha",  title: "Director of Communications",img: ""               },
-              { name: "Vivek Koul",     title: "Technical Director",        img: ""               },
-              { name: "Ragnya Thakur",  title: "Social Media Manager",      img: ""               },
-            ].map(({ name, title, img }) => (
+              { name: "Vikrum Chauhan",  title: "Director of Operations",    img: "/team-vikrum.jpg",   objPos: "50% 0%"   },
+              { name: "Chetna Zalpuri", title: "Executive Director",         img: "/team-chetna.jpg",   objPos: "50% 0%"   },
+              { name: "Mary Jane",      title: "Food Coordinator",           img: "/team-mary.jpg",     objPos: "50% 0%"   },
+              { name: "Sulagana Guha",  title: "Director of Communications", img: "/team-sulagana.jpg", objPos: "50% 0%"   },
+              { name: "Vivek Koul",     title: "Technical Director",         img: "/team-vivek.jpg",    objPos: "15% 30%", zoom: true },
+              { name: "Ragnya Thakur",  title: "Social Media Manager",       img: "/team-ragnya.jpg",   objPos: "50% 0%"   },
+            ].map(({ name, title, img, objPos, zoom = false }) => (
               <div key={name} className="flex flex-col gap-4">
                 <div className="w-full aspect-square border border-gray-200 bg-gray-100 overflow-hidden">
                   {img && (
                     <img
                       src={img}
                       alt={name}
-                      className="w-full h-full object-cover object-top"
+                      className="w-full h-full object-cover"
+                      style={{ objectPosition: objPos, transform: zoom ? "scale(1.8)" : undefined, transformOrigin: zoom ? "15% 30%" : undefined }}
                     />
                   )}
                 </div>

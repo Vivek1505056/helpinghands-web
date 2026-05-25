@@ -96,7 +96,7 @@ export default function StatsSection() {
         <h2 className="text-4xl font-bold text-white mb-3">Our Impact</h2>
         <div className="w-12 h-1 bg-white/40 mx-auto" />
       </div>
-      <div className="max-w-3xl mx-auto grid grid-cols-2 gap-12 text-center">
+      <div className="max-w-3xl mx-auto grid grid-cols-2 gap-6 sm:gap-12 text-center">
         {stats.map(({ prefix, suffix, decimals, label }, i) => (
           <div key={label} className="flex flex-col items-center gap-3">
             <p className="text-5xl sm:text-6xl font-bold text-white leading-none tabular-nums">
